@@ -10,15 +10,17 @@ namespace appSafeWalker.Clases
         private string departamento;
         private string municipio;
         private string barrio;
+        private string ubicacion;
         private string tipoLugar;
 
         public DatosAsesinato(string lineaArchivo)
         {
-            string[] valores = lineaArchivo.Split(',');
+            string[] valores = lineaArchivo.Split(';');
             fecha = valores[0];
             departamento = valores[1];
             municipio = valores[2];
             barrio = valores[5];
+            ubicacion = valores[5] + " " + valores[2] + " " + valores[1];
             tipoLugar = valores[7];
         }
         public string getFecha()
@@ -41,6 +43,10 @@ namespace appSafeWalker.Clases
         public string getTipoLugar()
         {
             return tipoLugar;
+        }
+        public string getUbicacion()
+        {
+            return ubicacion;
         }
     }
 }
