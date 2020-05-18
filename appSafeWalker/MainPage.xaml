@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:Maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appSafeWalker.MainPage">
+
+    <StackLayout>
+        <Label Text="SafeWalker" FontSize="45" TextColor="Black" BackgroundColor="RoyalBlue" HorizontalTextAlignment="Center" />
+        <Maps:Map x:Name="MyMap" IsShowingUser="True" MapType="Street" />
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Entry Placeholder="Ingrese ubicación" x:Name="ingUbicacion" FontSize="Title" ClearButtonVisibility="WhileEditing"/>
+            <Entry Placeholder="Ingrese destino" x:Name="ingDestino" FontSize="Title" ClearButtonVisibility="WhileEditing"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
+
